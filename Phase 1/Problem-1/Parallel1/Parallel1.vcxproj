@@ -24,7 +24,7 @@
     <ProjectGuid>{4d2a40bf-27ab-41ce-99b2-6f1156cd2e46}</ProjectGuid>
     <RootNamespace>Reduzido1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>ParallelFastType1</ProjectName>
+    <ProjectName>1ParallelFastType</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">

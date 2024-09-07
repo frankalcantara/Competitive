@@ -24,7 +24,7 @@
     <ProjectGuid>{ade0b661-731a-4efd-a8cc-34a97c18eabb}</ProjectGuid>
     <RootNamespace>SoMain1</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
-    <ProjectName>Competitive</ProjectName>
+    <ProjectName>1Competitive</ProjectName>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
