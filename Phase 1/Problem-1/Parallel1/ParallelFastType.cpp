@@ -1,19 +1,20 @@
+// tranlated by chatgpt in 2024-09-07
 #include <iostream>
 #include <vector>
 #include <numeric>
-#include <execution>  // Necessário para políticas de execução em reduce
+#include <execution>  // Necessary for execution policies in reduce
 
 using namespace std;
 
-// Aliases para reduzir a digitação de tipos longos
+// Aliases to reduce typing of long types
 using vi = vector<int>;
 using vvi = vector<vector<int>>;
 using vll = vector<long long>;
-using exec_seq = execution::sequenced_policy; // Alias para execution::seq
+using exec_seq = execution::sequenced_policy; // Alias for execution::seq
 
-// Função auxiliar para imprimir os resultados de forma formatada.
+// Helper function to print the results in a formatted way.
 void printResult(const vi& humidity, const vvi& adjustments, const vll& result) {
-    // Imprime a umidade inicial e os ajustes.
+    // Prints the initial humidity and the adjustments.
     cout << "Input: humidity = [";
     for (size_t i = 0; i < humidity.size(); ++i) {
         cout << humidity[i] << (i < humidity.size() - 1 ? ", " : "");
@@ -24,84 +25,84 @@ void printResult(const vi& humidity, const vvi& adjustments, const vll& result) 
     }
     cout << "]\n";
 
-    // Imprime o resultado após cada ajuste.
+    // Prints the result after each adjustment.
     cout << "Output: ";
-    for (auto res : result) {  // Usando auto para dedução automática de tipo
+    for (auto res : result) {  // Using auto for automatic type deduction
         cout << res << " ";
     }
     cout << "\n\n";
 }
 
 int main() {
-    // Exemplo 1
-    vi humidity1 = { 45, 52, 33, 64 };  // Vetor de umidade inicial.
-    vvi adjustments1 = { {5,0}, {-20,1}, {-14,0}, {18,3} };  // Vetor de ajustes.
+    // Example 1
+    vi humidity1 = { 45, 52, 33, 64 };  // Initial humidity vector.
+    vvi adjustments1 = { {5,0}, {-20,1}, {-14,0}, {18,3} };  // Adjustments vector.
 
-    // Cria um vetor para armazenar os resultados, reservando espaço suficiente para evitar realocações desnecessárias.
+    // Create a vector to store the results, reserving enough space to avoid unnecessary reallocations.
     vll result1;
     result1.reserve(adjustments1.size());
 
-    // Itera sobre cada ajuste fornecido.
+    // Iterates over each provided adjustment.
     for (const auto& adjustment : adjustments1) {
-        int value = adjustment[0];  // Extrai o valor de ajuste.
-        int index = adjustment[1];  // Extrai o índice do sensor que será ajustado.
+        int value = adjustment[0];  // Extracts the adjustment value.
+        int index = adjustment[1];  // Extracts the index of the sensor to be adjusted.
 
-        // Atualiza o valor em humidity1[index] com o ajuste.
+        // Updates the value in humidity1[index] with the adjustment.
         humidity1[index] += value;
 
-        // Calcula a soma dos valores pares no array de umidade após a atualização usando reduce.
+        // Calculates the sum of even values in the humidity array after the update using reduce.
         auto sum = reduce(
-            exec_seq{},       // Especifica execução sequencial (garante a ordem de avaliação).
-            humidity1.begin(),        // Início do intervalo do vetor humidity1.
-            humidity1.end(),          // Fim do intervalo do vetor humidity1.
-            0LL,                      // Valor inicial da soma (0), com tipo long long para evitar estouro.
-            [](auto acc, auto val) {  // Usando auto para parâmetros de lambda
-                return acc + (val % 2 == 0 ? val : 0);  // Adiciona à soma se o valor for par.
+            exec_seq{},       // Specifies sequential execution (ensures evaluation order).
+            humidity1.begin(),        // Start of the humidity1 vector range.
+            humidity1.end(),          // End of the humidity1 vector range.
+            0LL,                      // Initial sum value (0), with type long long to avoid overflow.
+            [](auto acc, auto val) {  // Using auto for lambda parameters
+                return acc + (val % 2 == 0 ? val : 0);  // Adds to the sum if the value is even.
             }
         );
 
-        // Adiciona a soma atual dos valores pares ao vetor de resultados.
+        // Adds the current sum of even values to the result vector.
         result1.push_back(sum);
     }
 
-    // Imprime os resultados para o exemplo 1.
-    cout << "Exemplo 1:\n";
+    // Prints the results for example 1.
+    cout << "Example 1:\n";
     printResult(humidity1, adjustments1, result1);
 
-    // Exemplo 2
-    vi humidity2 = { 40 };  // Vetor de umidade inicial para o segundo exemplo.
-    vvi adjustments2 = { {12,0} };  // Vetor de ajustes para o segundo exemplo.
+    // Example 2
+    vi humidity2 = { 40 };  // Initial humidity vector for the second example.
+    vvi adjustments2 = { {12,0} };  // Adjustments vector for the second example.
 
-    // Cria um vetor para armazenar os resultados.
+    // Create a vector to store the results.
     vll result2;
     result2.reserve(adjustments2.size());
 
-    // Itera sobre cada ajuste fornecido.
+    // Iterates over each provided adjustment.
     for (const auto& adjustment : adjustments2) {
-        int value = adjustment[0];  // Extrai o valor de ajuste.
-        int index = adjustment[1];  // Extrai o índice do sensor que será ajustado.
+        int value = adjustment[0];  // Extracts the adjustment value.
+        int index = adjustment[1];  // Extracts the index of the sensor to be adjusted.
 
-        // Atualiza o valor em humidity2[index] com o ajuste.
+        // Updates the value in humidity2[index] with the adjustment.
         humidity2[index] += value;
 
-        // Calcula a soma dos valores pares no array de umidade após a atualização usando reduce.
+        // Calculates the sum of even values in the humidity array after the update using reduce.
         auto sum = reduce(
-            exec_seq{},       // Especifica execução sequencial (garante a ordem de avaliação).
-            humidity2.begin(),        // Início do intervalo do vetor humidity2.
-            humidity2.end(),          // Fim do intervalo do vetor humidity2.
-            0LL,                      // Valor inicial da soma (0), com tipo long long para evitar estouro.
-            [](auto acc, auto val) {  // Usando auto para parâmetros de lambda
-                return acc + (val % 2 == 0 ? val : 0);  // Adiciona à soma se o valor for par.
+            exec_seq{},       // Specifies sequential execution (ensures evaluation order).
+            humidity2.begin(),        // Start of the humidity2 vector range.
+            humidity2.end(),          // End of the humidity2 vector range.
+            0LL,                      // Initial sum value (0), with type long long to avoid overflow.
+            [](auto acc, auto val) {  // Using auto for lambda parameters
+                return acc + (val % 2 == 0 ? val : 0);  // Adds to the sum if the value is even.
             }
         );
 
-        // Adiciona a soma atual dos valores pares ao vetor de resultados.
+        // Adds the current sum of even values to the result vector.
         result2.push_back(sum);
     }
 
-    // Imprime os resultados para o exemplo 2.
-    cout << "Exemplo 2:\n";
+    // Prints the results for example 2.
+    cout << "Example 2:\n";
     printResult(humidity2, adjustments2, result2);
 
-    return 0;  // Indica que o programa terminou com sucesso.
+    return 0;  // Indicates that the program finished successfully.
 }

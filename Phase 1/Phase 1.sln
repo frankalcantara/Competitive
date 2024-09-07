@@ -11,6 +11,8 @@ Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "ParallelFastType1", "Proble
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Competitive", "Problem-1\Competitive1\Competitive1.vcxproj", "{ADE0B661-731A-4EFD-A8CC-34A97C18EABB}"
 EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Dicas1", "Dicas1\Dicas1.vcxproj", "{267CD58F-80B9-409F-BB98-C098BB61BF14}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|x64 = Debug|x64
@@ -51,6 +53,14 @@ Global
 		{ADE0B661-731A-4EFD-A8CC-34A97C18EABB}.Release|x64.Build.0 = Release|x64
 		{ADE0B661-731A-4EFD-A8CC-34A97C18EABB}.Release|x86.ActiveCfg = Release|Win32
 		{ADE0B661-731A-4EFD-A8CC-34A97C18EABB}.Release|x86.Build.0 = Release|Win32
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Debug|x64.ActiveCfg = Debug|x64
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Debug|x64.Build.0 = Debug|x64
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Debug|x86.ActiveCfg = Debug|Win32
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Debug|x86.Build.0 = Debug|Win32
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Release|x64.ActiveCfg = Release|x64
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Release|x64.Build.0 = Release|x64
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Release|x86.ActiveCfg = Release|Win32
+		{267CD58F-80B9-409F-BB98-C098BB61BF14}.Release|x86.Build.0 = Release|Win32
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

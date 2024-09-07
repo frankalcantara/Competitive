@@ -1,3 +1,4 @@
+// translated by chatgpt 2024-09-07
 #include <iostream>
 #include <vector>
 

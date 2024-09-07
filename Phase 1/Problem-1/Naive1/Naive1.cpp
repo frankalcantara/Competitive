@@ -1,4 +1,4 @@
-// Traduzido para o inglês pelo Chatgpt em 07/09/2024
+// Translated by Chatgpt in 07/09/2024
 
 #include <iostream>  // Includes the library for input and output.
 #include <vector>    // Includes the library to use vectors.
