@@ -1,4 +1,3 @@
-// tranlated by chatgpt in 2024-09-07
 #include <iostream>
 #include <vector>
 #include <numeric>
