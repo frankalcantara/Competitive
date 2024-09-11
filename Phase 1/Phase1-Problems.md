@@ -119,7 +119,6 @@ You manage a warehouse where products are stored and moved frequently. The wareh
 16
 20
 16
-</text>
 
 **Explanation:**
 
@@ -161,6 +160,7 @@ You are tasked with analyzing sales data to determine how many subarrays of dail
 **Explanation:**
 
 There are 7 subarrays whose sum is divisible by $T = 5$:
+
 - $[4, 5, 0, -2, -3, 1]$
 - $[5]$
 - $[5, 0]$
