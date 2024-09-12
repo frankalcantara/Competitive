@@ -15,7 +15,7 @@
     </Filter>
   </ItemGroup>
   <ItemGroup>
-    <ClCompile Include="2OtimizadoFrank.cpp">
+    <ClCompile Include="2Prefix_Sum.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>

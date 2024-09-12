@@ -21,8 +21,8 @@
   <PropertyGroup Label="Globals">
     <VCProjectVersion>17.0</VCProjectVersion>
     <Keyword>Win32Proj</Keyword>
-    <ProjectGuid>{fc686270-c2ac-4e91-8784-28f31f2ce3de}</ProjectGuid>
-    <RootNamespace>My2OtimizadoFrank</RootNamespace>
+    <ProjectGuid>{be0e5e32-6dc3-4240-beeb-cca98fd10a3b}</ProjectGuid>
+    <RootNamespace>My2NovoFrank</RootNamespace>
     <WindowsTargetPlatformVersion>10.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
@@ -129,7 +129,7 @@
     </Link>
   </ItemDefinitionGroup>
   <ItemGroup>
-    <ClCompile Include="2OtimizadoFrank.cpp" />
+    <ClCompile Include="2NovoFrank.cpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">
