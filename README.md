@@ -9,4 +9,4 @@ We will create a Visual Studio solution for each phase. For each phase, there wi
 You can also create a subdirectory with your solutions, your proposals, and anything you want to post. Just don't forget that this directory must have your name, and the README file with your GitHub username and a brief curriculum must also be included.
 
 Contributors (in alphabetical order):
-Frank Coelho de Alcantara ([@frankalcantara](https://github.com/frankalcantara))
+- Frank Coelho de Alcantara ([@frankalcantara](https://github.com/frankalcantara))
