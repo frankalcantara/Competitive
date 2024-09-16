@@ -1,4 +1,3 @@
-<!-- Traduzido para o inglês pelo Chatgpt em 07/08/2024 -->
 ### 1. Humidity Levels in a Greenhouse (Frank - 09-2024 - Easy)
 
 You are responsible for monitoring and adjusting the humidity levels in a greenhouse that contains several plants. The greenhouse has a set of humidity sensors, represented by an array $humidity$, where each position in the array corresponds to a reading from a sensor.
@@ -24,7 +23,7 @@ After adding $18$ to $humidity[3]$, the array becomes $[36,32,33,82]$, and the s
 Input: $humidity = [40]$, $adjustments = [[12,0]]$
 Output: $[52]$
 
-**Example 3**
+**Example 3**:
 
 Input: $humidity = [30, 41, 55, 68, 72]$, $adjustments = [[10,0],[-15,2],[22,1],[-8,4],[5,3]]$
 Output: $[140,140,162,230,230]$

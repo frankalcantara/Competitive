@@ -3,10 +3,10 @@
 
 using namespace std;
 
-using ps = vector<int>;  // Alias for prefix_sum as a vector of long long
-using ts = int;          // Alias for total_sum as long long
-using pl = vector<int>;        // Alias for plates as a vector of int
-using vi = vector<int>;        // Alias for vector of int (similar to vi)
+using ps = vector<int>;  
+using ts = int;          
+using pl = vector<int>;  
+using vi = vector<int>;  
 
 int main() {
     vi pl;
